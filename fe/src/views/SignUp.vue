@@ -116,29 +116,6 @@
             class="fa fa-globe"
             aria-hidden="true"
           /></span></div>
-          <div class="wrap-input100 validate-input mt-3"><b class="mr-2">Do you have experience in text data collection?</b> <br>
-            <div class="form-check form-check-inline ml-4"><input
-              id="hasExperience1"
-              v-model="hasExperience"
-              class="form-check-input"
-              type="radio"
-              value="1"
-              required
-            ><label
-              class="form-check-label pl-2"
-              for="hasExperience1"
-            >Yes</label></div>
-            <div class="form-check form-check-inline ml-5"><input
-              id="hasExperience2"
-              v-model="hasExperience"
-              class="form-check-input"
-              type="radio"
-              value="0"
-            ><label
-              class="form-check-label pl-2"
-              for="hasExperience2"
-            >No</label></div>
-          </div><!-- The field of work: -->
           <div class="container-login100-form-btn"><button
             class="login100-form-btn"
           >Create account</button></div>
