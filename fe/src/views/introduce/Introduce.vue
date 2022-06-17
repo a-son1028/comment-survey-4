@@ -8,20 +8,20 @@
       <div>
         <h3 class="title text-center">Project description</h3><!-- intro-->
         <div class="intro mt-3">
-          <div class="intro-title text-underline font-weight-bold">Description:</div>
+          <!-- <div class="intro-title text-underline font-weight-bold">Description:</div> -->
           <div class="intro-desc">
-            The purpose of this survey is to assess the user's preference with respect to the app installation when referring to the necessary information of Android applications before installing the application.
+            This survey aims to understand which information a user considers essential to evaluate an app's privacy risks and benefits before installing it.
           </div>
         </div>
 
         <div class="intro mt-3">
-          <div class="intro-title text-underline font-weight-bold">Background:</div>
+          <!-- <div class="intro-title text-underline font-weight-bold">Background:</div> -->
           <div class="intro-desc">
-            <b>App basic info</b> describes the app information from the market including app name; category and developer.
+            <b>App basic info</b> describes app information taken from the app's market, including the app's name, category, and developer.
           </div>
-          <div class="mt-2"><b>Data collection</b> shows the personal data collection (i.e., location, media, connection, telephony, hardware, health & fitness, and user profile)</div>
+          <div><b>Data collection refers to</b> the personal data collected by the app (i.e., location, media, connection, telephony, hardware, health & fitness, and user profile)</div>
 
-          <div class="mt-2"><b>App’s privacy</b> policy discloses how an Android app gathers, stores, and uses the personal data which collects from the end-users for the app's service execution. This document includes data collection purposes and the third party.</div>
+          <div><b>App's privacy policy.</b> It states how an app gathers, stores, and uses the personal data it collects. This document includes data collection purposes and third parties with which data are shared.</div>
         </div>
       </div>
     </div>

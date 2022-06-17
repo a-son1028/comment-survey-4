@@ -11,7 +11,7 @@
         <div id="questions">
 
           <div>
-            <div><b>1.	How do you rate the necessity of the app's features in the Android app installation?</b></div>
+            <div><b>1. What is the important of the following features in your app installation decision?</b></div>
             <div class="mt-2"><b>App basic info:</b> 
               <div>
                 <div>
@@ -76,7 +76,9 @@
               </div>  
             </div>
 
-            <div class="mt-2"><b>Other:</b>
+            <div class="mt-2">
+              <div><b>If the above information is not enough for app installation, which other information do you think is needed. Please provide this below.</b></div>
+              <b>Other information:</b>
               <div>
                 <UITextarea
                   v-model="question4.value"
@@ -87,11 +89,19 @@
           </div>
 
           <div class="mt-3">
-            <div><b>2. Why do you think this information is enough for your app installation decision?</b></div>
+            <div><b>2. Do you think these features are enough to take app installation decision?</b></div>
             <div>
+              <UIRadioGroup
+                v-model="question51.value"
+                name="question51"
+                :options="questionOptions2"
+              />
+            </div>
+            <div>
+              <div>Please justify your response: </div>
               <UITextarea
-                v-model="question5.value"
-                name="question5"
+                v-model="question52.value"
+                name="question52"
               />
             </div>
           </div>
@@ -114,7 +124,8 @@ import UITextarea from '@/components/UITextarea.vue'
 import { GET_ANSWER, STORE_ANSWER } from '@/store/modules/question/action.type.js'
 import { GET_USER_INFO } from '@/store/modules/user/action.type.js'
 
-const questionOptions = [{label: 'Very unnecessary', value: 1}, {label: 'Unnecessary', value: 2}, {label: 'Neutral', value: 3},{label: 'Necessary', value: 4},{label: 'Very necessary', value: 5} ]
+const questionOptions = [{label: 'Very unimportant', value: 1}, {label: 'Unimportant', value: 2}, {label: 'Neutral', value: 3},{label: 'Important', value: 4},{label: 'Very important', value: 5} ]
+const questionOptions2 = [{label: 'Yes', value: 1}, {label: 'No', value: 0},]
 
 export default {
   components: {
@@ -126,6 +137,7 @@ export default {
   data: () => ({
     isLoading: true,
     questionOptions,
+    questionOptions2,
     question11: {
       name: 'question11',
       description: 'appname',
@@ -158,8 +170,12 @@ export default {
       description: 'other',
       value: '',
     },
-     question5: {name: 'question5',
-      description: 'question2',
+     question51: {name: 'question51',
+      description: 'question2 Yes-No',
+      value: '',
+    },
+    question52: {name: 'question52',
+      description: 'question2 text box',
       value: '',
     },
   }),
@@ -195,7 +211,7 @@ export default {
       e.preventDefault();
       this.isLoading = true
       const data = {
-        responses: [this.question11, this.question12, this.question13,this.question2,this.question31,this.question32,this.question4,this.question5]
+        responses: [this.question11, this.question12, this.question13,this.question2,this.question31,this.question32,this.question4,this.question51, this.question52]
       }
 
       this.$store.dispatch(STORE_ANSWER, data)
