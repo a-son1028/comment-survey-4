@@ -75,6 +75,16 @@
               class="form-check-label pl-2"
               for="inlineRadio2"
             >Female</label></div>
+            <div class="form-check form-check-inline ml-5"><input
+              id="inlineRadio2"
+              v-model="gender"
+              class="form-check-input"
+              type="radio"
+              value="other"
+            ><label
+              class="form-check-label pl-2"
+              for="inlineRadio2"
+            >Other</label></div>
           </div><!-- The field of work: -->
           <div
             class="wrap-input100 validate-input"

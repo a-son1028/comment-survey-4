@@ -40,6 +40,42 @@
                     :options="questionOptions"
                   />
                 </div>
+
+                <div>
+                  <u style="margin-left: 10px">Description </u>
+                  <UIRadioGroup
+                    v-model="question14.value"
+                    name="question14"
+                    :options="questionOptions"
+                  />
+                </div>
+
+                <div>
+                  <u style="margin-left: 10px">Number of download </u>
+                  <UIRadioGroup
+                    v-model="question15.value"
+                    name="question15"
+                    :options="questionOptions"
+                  />
+                </div>
+
+                <div>
+                  <u style="margin-left: 10px">Picture/video </u>
+                  <UIRadioGroup
+                    v-model="question16.value"
+                    name="question16"
+                    :options="questionOptions"
+                  />
+                </div>
+
+                <div>
+                  <u style="margin-left: 10px">Ratings </u>
+                  <UIRadioGroup
+                    v-model="question17.value"
+                    name="question17"
+                    :options="questionOptions"
+                  />
+                </div>
               </div>  
             </div>
 
@@ -153,6 +189,26 @@ export default {
       description: 'developer',
       value: null,
     },
+    question14: {
+      name: 'question14',
+      description: 'description',
+      value: null,
+    },
+    question15: {
+      name: 'question15',
+      description: 'number of download',
+      value: null,
+    },
+    question16: {
+      name: 'question16',
+      description: 'picture/video',
+      value: null,
+    },
+    question17: {
+      name: 'question17',
+      description: 'ratings',
+      value: null,
+    },
     question2: {
       name: 'question2',
       description: 'datacollection',
@@ -211,7 +267,7 @@ export default {
       e.preventDefault();
       this.isLoading = true
       const data = {
-        responses: [this.question11, this.question12, this.question13,this.question2,this.question31,this.question32,this.question4,this.question51, this.question52]
+        responses: [this.question11, this.question12, this.question13,this.question14,this.question15,this.question16,this.question17,this.question2,this.question31,this.question32,this.question4,this.question51, this.question52]
       }
 
       this.$store.dispatch(STORE_ANSWER, data)
