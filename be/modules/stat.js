@@ -29,6 +29,10 @@ async function main() {
       title: "Worker Id"
     },
     {
+      id: "taskId",
+      title: "Task Id"
+    },
+    {
       id: "email",
       title: "email"
     },
@@ -150,6 +154,9 @@ async function main() {
       stt: stt++,
       ...(microWorker && {
         workerId: microWorker[3]
+      }),
+      ...(microWorker && {
+        taskId: microWorker[0]
       }),
       email,
       ...(appName &&
